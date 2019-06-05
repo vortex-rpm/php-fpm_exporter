@@ -4,7 +4,7 @@ Documentation=https://github.com/hipages/php-fpm_exporter
 After=network.target
 
 [Service]
-EnvironmentFile=-/etc/default/php-fpm_exporter $PHP-FPM_EXPORTER_OPTS
+EnvironmentFile=-/etc/default/php-fpm_exporter $PHP-FPM_EXPORTER_OPTS server
 User=prometheus
 ExecStart=/usr/bin/php-fpm_exporter
 Restart=on-failure

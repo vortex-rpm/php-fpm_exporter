@@ -32,6 +32,7 @@ git checkout v%{version}
 %build
 export GOPATH=$(pwd)/_build
 cd $GOPATH/%{_git_slug}
+make deps
 go build main.go
 mv main %{name}
 strip %{name}

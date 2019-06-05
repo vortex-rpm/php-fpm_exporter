@@ -6,7 +6,7 @@ After=network.target
 [Service]
 EnvironmentFile=-/etc/default/php-fpm_exporter
 User=prometheus
-ExecStart=/usr/bin/php-fpm_exporter $PHP-FPM_EXPORTER_OPTS server
+ExecStart=/usr/bin/php-fpm_exporter $PHPFPM_EXPORTER_OPTS server
 Restart=on-failure
 
 [Install]

@@ -1,0 +1,13 @@
+[Unit]
+Description=php-fpm Exporter for Prometheus
+Documentation=https://github.com/hipages/php-fpm_exporter
+After=network.target
+
+[Service]
+EnvironmentFile=-/etc/default/php-fpm_exporter $PHP-FPM_EXPORTER_OPTS
+User=prometheus
+ExecStart=/usr/bin/php-fpm_exporter
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

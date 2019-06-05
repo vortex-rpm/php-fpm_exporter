@@ -13,7 +13,6 @@ URL:     https://github.com/hipages/php-fpm_exporter
 
 Source1: %{name}.service
 Source2: %{name}.default
-Source3: %{name}.init
 
 Requires(preun): chkconfig, initscripts
 Requires(pre): shadow-utils

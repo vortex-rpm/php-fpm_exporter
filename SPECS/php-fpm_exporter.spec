@@ -32,7 +32,7 @@ git checkout v%{version}
 %build
 export GOPATH=$(pwd)/_build
 cd $GOPATH/%{_git_slug}
-go bild main.go
+go build main.go
 mv main %{name}
 strip %{name}
 
